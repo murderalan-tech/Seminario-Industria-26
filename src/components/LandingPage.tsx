@@ -109,7 +109,7 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
                 <h3 className="font-display text-xl font-bold">Fecha</h3>
               </div>
               <p className="text-lg text-on-surface font-bold">Jueves 23 de Julio 2026</p>
-              <p className="text-on-surface-variant mt-1 text-sm">Recepción: 18:30 hrs.</p>
+              <p className="text-on-surface-variant mt-1 text-sm">Horario: 18:30 hrs.</p>
             </div>
             {/* Info Card 2 */}
             <div className="bg-surface border border-outline-variant p-8 accent-border industrial-shadow rounded-lg text-left">
