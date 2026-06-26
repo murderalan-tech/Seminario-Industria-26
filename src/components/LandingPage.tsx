@@ -49,18 +49,16 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
       {/* TopNavBar */}
       <nav className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b-2 border-outline-variant shadow-sm">
         <div className="flex justify-between items-center h-20 px-4 md:px-16 max-w-7xl mx-auto">
+          <div className="flex items-center gap-4">
+            <img src={logo} alt="Alchisa Logo" className="h-12 w-auto object-contain" />
+          </div>
           <div className="flex items-center gap-8">
-            <div className="flex items-center gap-4">
-              <img src={logo} alt="Alchisa Logo" className="h-12 w-auto object-contain" />
-            </div>
             <div className="hidden md:flex gap-6">
               <a className="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#seminario">Seminario</a>
               <a className="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#ubicacion">Ubicación</a>
               <a className="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#parrillada">Parrillada</a>
               <a className="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#registro">Registro</a>
             </div>
-          </div>
-          <div className="flex items-center gap-4">
             <a className="bg-primary hover:bg-primary-container text-white px-6 py-2.5 font-bold uppercase tracking-wider text-xs rounded-lg active:scale-95 transition-all shadow-md" href="#registro">
               Inscribirse
             </a>
@@ -87,7 +85,7 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
                 Maximizando la Confiabilidad de los Sistemas Hidráulicos
               </h1>
               <p className="text-lg md:text-xl text-primary-fixed max-w-2xl font-light">
-                Principales causas de falla y estrategias de mitigación. Únete a los expertos de Mobil para elevar la eficiencia operativa de tu planta.
+                Principales causas de falla y estrategias de mitigación. Únete a los expertos de Mobil para elevar la efficiency operativa de tu planta.
               </p>
               <div className="flex flex-wrap gap-4 mt-4">
                 <a className="bg-primary-container text-white px-8 py-4 font-bold text-sm rounded industrial-shadow hover:brightness-110 transition-all uppercase tracking-wider" href="#registro">
@@ -110,7 +108,7 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
                 <Calendar className="w-10 h-10" />
                 <h3 className="font-display text-xl font-bold">Fecha</h3>
               </div>
-              <p className="text-lg text-on-surface font-bold">23 de Julio 2026</p>
+              <p className="text-lg text-on-surface font-bold">Jueves 23 de Julio 2026</p>
               <p className="text-on-surface-variant mt-1 text-sm">Recepción: 18:30 hrs.</p>
             </div>
             {/* Info Card 2 */}
