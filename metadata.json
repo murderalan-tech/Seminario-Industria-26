@@ -1,0 +1,6 @@
+{
+  "name": "GeoVisit Tracker",
+  "description": "App para registrar visitas con coordenadas geográficas, datos del cliente y fotos.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": []
+}

@@ -1,0 +1,48 @@
+{
+  "entities": {
+    "VisitPoint": {
+      "title": "Visit Point",
+      "description": "A recorded visit at a specific location with client details.",
+      "type": "object",
+      "properties": {
+        "salesAdvisor": { "type": "string" },
+        "customerNumber": { "type": "string" },
+        "company": { "type": "string" },
+        "businessName": { "type": "string" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "photoBase64": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "userId": { "type": "string" }
+      },
+      "required": ["salesAdvisor", "customerNumber", "company", "businessName", "latitude", "longitude", "createdAt", "userId"]
+    },
+    "Client": {
+      "title": "Client",
+      "description": "A client record used for auto-filling visit forms.",
+      "type": "object",
+      "properties": {
+        "customerNumber": { "type": "string" },
+        "businessName": { "type": "string" },
+        "company": { "type": "string" },
+        "userId": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["customerNumber", "businessName", "company", "userId"]
+    }
+  },
+  "firestore": {
+    "/visits/{visitId}": {
+      "schema": "VisitPoint",
+      "description": "Collection of visit records."
+    },
+    "/clients/{clientId}": {
+      "schema": "Client",
+      "description": "Collection of clients for auto-fill."
+    },
+    "/admins/{adminId}": {
+      "schema": "object",
+      "description": "List of admin UIDs."
+    }
+  }
+}
