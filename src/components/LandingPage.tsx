@@ -141,7 +141,7 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
                 <h2 className="text-3xl font-display font-bold text-primary mb-4">Soluciones de Clase Mundial. Sin importar el reto.</h2>
                 <div className="w-24 h-1 bg-secondary mb-6"></div>
                 <p className="text-lg text-on-surface-variant leading-relaxed">
-                  En este seminario técnico intensivo, abordaremos los desafíos más críticos que enfrentan los sistemas hidráulicos modernos. Aprenda de ingenieros expertos cómo prevenir el tiempo de inactividad no planificado y optimizar el rendimiento de sus lubricantes Mobil.
+                  En este seminario técnico intensivo, abordaremos los desafíos más críticos que enfrentan los sistemas hidráulicos modernos. Aprenda de ingenieros expertos cómo prevenir el tiempo de inactividad no planificado y optimizar el rendimiento de sus lubricantes Mobil™.
                 </p>
               </div>
               <div className="space-y-4">
@@ -151,7 +151,7 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
                     <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                     <div>
                       <p className="font-bold text-on-surface">Análisis de Fallas Comunes</p>
-                      <p className="text-on-surface-variant text-sm mt-0.5">Identificación de contaminantes y degradación térmica.</p>
+                      <p className="text-on-surface-variant text-sm mt-0.5">Identificación de causas de fallas en sistemas hidráulicos.</p>
                     </div>
                   </li>
                   <li className="p-4 flex gap-4 items-start bg-gray-50/50">
@@ -164,8 +164,8 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
                   <li className="p-4 flex gap-4 items-start bg-white">
                     <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-bold text-on-surface">Tecnología Mobil SHC™</p>
-                      <p className="text-on-surface-variant text-sm mt-0.5">Beneficios de la lubricación sintética de alto rendimiento.</p>
+                      <p className="font-bold text-on-surface">Tecnología de lubricantes Mobil™</p>
+                      <p className="text-on-surface-variant text-sm mt-0.5">Beneficios de la lubricación de alto rendimiento.</p>
                     </div>
                   </li>
                 </ul>
