@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin, Utensils, CheckCircle2, ExternalLink, Mail, Phone, Globe, Flame, Loader2, Sparkles } from 'lucide-react';
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { db } from '../lib/firebase';
 import logo from '../assets/logo.png';
 import map from '../assets/map.png';
 import parrillada from '../assets/parrillada.jpg';
 import hero from '../assets/hero.jpg';
 import mobilLogo from '../assets/mobil_logo.png';
+
+// Reemplaza esta URL con la URL de tu aplicación web de Google Apps Script
+const SCRIPT_URL = 'TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI';
 
 interface LandingPageProps {
   onNavigateToTracker: () => void;
@@ -29,11 +30,15 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
     setIsSubmitting(true);
     setError(null);
     try {
-      // Save to Firebase firestore
-      await addDoc(collection(db, 'seminar_registrations'), {
-        ...formData,
-        createdAt: serverTimestamp(),
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+      
       setSuccess(true);
       setFormData({ fullName: '', company: '', email: '', phone: '', jobTitle: '' });
     } catch (err) {

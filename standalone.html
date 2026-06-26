@@ -464,26 +464,58 @@
             });
         });
 
+        // Reemplaza esta URL con la URL de tu aplicación web de Google Apps Script
+        const SCRIPT_URL = 'TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI';
+
         // Form submission handler
         const form = document.getElementById('seminar-form');
         const container = document.getElementById('form-container');
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+            
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                company: document.getElementById('company').value,
+                jobTitle: document.getElementById('jobTitle').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value
+            };
 
-            // Show successful registration message
-            container.innerHTML = `
-                <div class="text-center py-8 space-y-4">
-                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                        <span class="material-symbols-outlined text-4xl">check_circle</span>
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = "PROCESANDO...";
+            submitBtn.disabled = true;
+
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                // Show successful registration message
+                container.innerHTML = `
+                    <div class="text-center py-8 space-y-4">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                            <span class="material-symbols-outlined text-4xl">check_circle</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-emerald-800">¡Registro Exitoso!</h4>
+                        <p class="text-sm text-gray-600">Tu lugar ha sido reservado. Te enviaremos un correo de confirmación con los detalles del evento.</p>
+                        <button onclick="location.reload()" class="mt-4 text-sm font-semibold text-primary hover:underline">
+                            Registrar a otra persona
+                        </button>
                     </div>
-                    <h4 class="text-xl font-bold text-emerald-800">¡Registro Exitoso!</h4>
-                    <p class="text-sm text-gray-600">Tu lugar ha sido reservado. Te enviaremos un correo de confirmación con los detalles del evento.</p>
-                    <button onclick="location.reload()" class="mt-4 text-sm font-semibold text-primary hover:underline">
-                        Registrar a otra persona
-                    </button>
-                </div>
-            `;
+                `;
+            })
+            .catch(err => {
+                console.error("Error al registrar:", err);
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+                alert("Ocurrió un problema al enviar tu registro. Por favor, intenta de nuevo.");
+            });
         });
     </script>
     <!-- Floating WhatsApp Button -->
