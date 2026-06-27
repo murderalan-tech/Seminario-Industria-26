@@ -298,7 +298,7 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
                   ¡Te esperamos! Parrillada Mobil™
                 </h2>
                 <p className="text-lg text-primary-fixed font-light leading-relaxed">
-                  Después de la sesión técnica, relájate y conecta con otros líderes de la industria en nuestra exclusiva convivencia. Disfruta de una experiencia gastronómica única con <strong>"Parrillando con la Raza"</strong>.
+                  Después de la sesión técnica, relájate y conecta con otros líderes de la industria en nuestra exclusiva convivencia. Disfruta de una experiencia gastronómica única con una <strong>Clase Parrillera</strong> impartida por <strong>"Parrillando con la Raza"</strong>.
                 </p>
                 <div className="flex flex-wrap gap-8 items-center pt-4">
                   <img 
