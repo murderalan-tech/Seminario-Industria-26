@@ -90,7 +90,7 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
                 Maximizando la Confiabilidad de los Sistemas Hidráulicos
               </h1>
               <p className="text-lg md:text-xl text-primary-fixed max-w-2xl font-light">
-                Principales causas de falla y estrategias de mitigación. Únete a los expertos de Mobil para elevar la efficiency operativa de tu planta.
+                Principales causas de falla y estrategias de mitigación. Únete a los expertos de Mobil para elevar la eficiencia operativa de tu planta.
               </p>
               <div className="flex flex-wrap gap-4 mt-4">
                 <a className="bg-primary-container text-white px-8 py-4 font-bold text-sm rounded industrial-shadow hover:brightness-110 transition-all uppercase tracking-wider" href="#registro">
