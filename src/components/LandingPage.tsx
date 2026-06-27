@@ -7,7 +7,7 @@ import hero from '../assets/hero.jpg';
 import mobilLogo from '../assets/mobil_logo.png';
 
 // Reemplaza esta URL con la URL de tu aplicación web de Google Apps Script
-const SCRIPT_URL = 'TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzRxRpaTWbkbo1937Qe3sCNZlSxHOZfEEf9h138bIBsnzyEFEVADMGeB728xetxKgS2Ew/exec';
 
 interface LandingPageProps {
   onNavigateToTracker: () => void;
