@@ -130,7 +130,7 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
                 <Utensils className="w-10 h-10" />
                 <h3 className="font-display text-xl font-bold">After Event</h3>
               </div>
-              <p className="text-lg text-on-surface font-bold">Parrillada Mobil</p>
+              <p className="text-lg text-on-surface font-bold">Parrillada Mobil™</p>
               <p className="text-on-surface-variant mt-1 text-sm">Networking & "Parrillando con la Raza".</p>
             </div>
           </div>
