@@ -82,12 +82,12 @@
                         "margin-mobile": "16px"
                     },
                     "fontFamily": {
-                        "headline-lg": ["Hanken Grotesk"],
-                        "body-md": ["Inter"],
-                        "headline-md": ["Hanken Grotesk"],
-                        "headline-lg-mobile": ["Hanken Grotesk"],
-                        "display-xl": ["Hanken Grotesk"],
-                        "body-lg": ["Inter"],
+                        "headline-lg": ["EMprint", "sans-serif"],
+                        "body-md": ["EMprint", "sans-serif"],
+                        "headline-md": ["EMprint", "sans-serif"],
+                        "headline-lg-mobile": ["EMprint", "sans-serif"],
+                        "display-xl": ["EMprint", "sans-serif"],
+                        "body-lg": ["EMprint", "sans-serif"],
                         "label-sm": ["JetBrains Mono"]
                     },
                     "fontSize": {
@@ -104,6 +104,46 @@
         }
     </script>
     <style>
+        @font-face {
+            font-family: 'EMprint';
+            src: url('src/assets/EMprint W05 Regular_web.woff2') format('woff2'),
+                 url('src/assets/EMprint W05 Regular_web.woff') format('woff'),
+                 url('src/assets/EMprint W05 Regular_web.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'EMprint';
+            src: url('src/assets/EMprint W05 Bold_web.woff2') format('woff2'),
+                 url('src/assets/EMprint W05 Bold_web.woff') format('woff'),
+                 url('src/assets/EMprint W05 Bold_web.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'EMprint';
+            src: url('src/assets/EMprint W05 Semibold_web.woff2') format('woff2'),
+                 url('src/assets/EMprint W05 Semibold_web.woff') format('woff'),
+                 url('src/assets/EMprint W05 Semibold_web.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'EMprint';
+            src: url('src/assets/EMprint W05 Light_web.woff2') format('woff2'),
+                 url('src/assets/EMprint W05 Light_web.woff') format('woff'),
+                 url('src/assets/EMprint W05 Light_web.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'EMprint', sans-serif !important;
+        }
+
         .industrial-shadow {
             box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
         }

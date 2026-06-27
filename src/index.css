@@ -1,9 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap');
+@font-face {
+  font-family: 'EMprint';
+  src: url('./assets/EMprint W05 Regular_web.woff2') format('woff2'),
+       url('./assets/EMprint W05 Regular_web.woff') format('woff'),
+       url('./assets/EMprint W05 Regular_web.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EMprint';
+  src: url('./assets/EMprint W05 Bold_web.woff2') format('woff2'),
+       url('./assets/EMprint W05 Bold_web.woff') format('woff'),
+       url('./assets/EMprint W05 Bold_web.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EMprint';
+  src: url('./assets/EMprint W05 Semibold_web.woff2') format('woff2'),
+       url('./assets/EMprint W05 Semibold_web.woff') format('woff'),
+       url('./assets/EMprint W05 Semibold_web.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EMprint';
+  src: url('./assets/EMprint W05 Light_web.woff2') format('woff2'),
+       url('./assets/EMprint W05 Light_web.woff') format('woff'),
+       url('./assets/EMprint W05 Light_web.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Hanken Grotesk", sans-serif;
+  --font-sans: "EMprint", sans-serif;
+  --font-display: "EMprint", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
   /* Colors from Stitch Project 1 Design System */
@@ -69,4 +104,7 @@
 }
 html {
   scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-sans);
 }
