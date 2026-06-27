@@ -62,7 +62,6 @@ export default function LandingPage({ onNavigateToTracker }: LandingPageProps) {
               <a className="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#seminario">Seminario</a>
               <a className="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#ubicacion">Ubicación</a>
               <a className="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#parrillada">Parrillada Mobil™</a>
-              <a className="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#registro">Registro</a>
             </div>
             <a className="bg-primary hover:bg-primary-container text-white px-6 py-2.5 font-bold uppercase tracking-wider text-xs rounded-lg active:scale-95 transition-all shadow-md" href="#registro">
               Inscribirse
