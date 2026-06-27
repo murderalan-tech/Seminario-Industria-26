@@ -146,7 +146,7 @@
                     <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
                         href="#ubicacion">Ubicación</a>
                     <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
-                        href="#parrillada">Parrillada</a>
+                        href="#parrillada">Parrillada Mobil™</a>
                     <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
                         href="#registro">Registro</a>
                 </div>
@@ -473,7 +473,7 @@
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             const formData = {
                 fullName: document.getElementById('fullName').value,
                 company: document.getElementById('company').value,
@@ -495,9 +495,9 @@
                 },
                 body: JSON.stringify(formData)
             })
-            .then(() => {
-                // Show successful registration message
-                container.innerHTML = `
+                .then(() => {
+                    // Show successful registration message
+                    container.innerHTML = `
                     <div class="text-center py-8 space-y-4">
                         <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
                             <span class="material-symbols-outlined text-4xl">check_circle</span>
@@ -509,13 +509,13 @@
                         </button>
                     </div>
                 `;
-            })
-            .catch(err => {
-                console.error("Error al registrar:", err);
-                submitBtn.innerText = originalText;
-                submitBtn.disabled = false;
-                alert("Ocurrió un problema al enviar tu registro. Por favor, intenta de nuevo.");
-            });
+                })
+                .catch(err => {
+                    console.error("Error al registrar:", err);
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                    alert("Ocurrió un problema al enviar tu registro. Por favor, intenta de nuevo.");
+                });
         });
     </script>
     <!-- Floating WhatsApp Button -->
